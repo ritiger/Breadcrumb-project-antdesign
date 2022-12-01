@@ -27,20 +27,20 @@ const routes = [
         path: "/",
 
         element: <RootPage />,
-        breadcrumbName: "首页"
+        breadcrumbName: "Home",
       },
       {
         path: "/a",
         element: <A />,
-        breadcrumbName: "a page"
+        breadcrumbName: "a page",
       },
       {
         path: "/b",
         element: <B />,
-        breadcrumbName: "b page"
-      }
-    ]
-  }
+        breadcrumbName: "b page",
+      },
+    ],
+  },
 ];
 
 const flatRoutes = [
@@ -48,13 +48,13 @@ const flatRoutes = [
   {
     path: "/a",
     element: <A />,
-    breadcrumbName: "a page"
+    breadcrumbName: "a page",
   },
   {
     path: "/b",
     element: <B />,
-    breadcrumbName: "b page"
-  }
+    breadcrumbName: "b page",
+  },
 ];
 
 const RouteDom = () => {
@@ -78,7 +78,7 @@ export default function App() {
       <HashRouter>
         <Row>
           <Space>
-            <Link to="/">首页 </Link>
+            <Link to="/">Home </Link>
             <Link to="/a">a page </Link>
             <Link to="/a/c">c page </Link>
             <Link to="/b">b page </Link>
@@ -87,14 +87,14 @@ export default function App() {
 
         <Row>
           <Space>
-            <div>层叠结构: </div>
+            <div>Stacked Structure: </div>
             <PageHeader breadcrumb={<Breadcrumb routes={routes} />} />
           </Space>
         </Row>
 
         <Row>
           <Space>
-            <div>扁平结构: </div>
+            <div>Flat Structure: </div>
             <PageHeader breadcrumb={<Breadcrumb routes={flatRoutes} />} />
           </Space>
         </Row>
